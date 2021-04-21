@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gangway-config
+  namespace: gangway
+data:
+  gangway.yaml: |
+    {{- toYaml .Values.gangway | nindent 4 }}
